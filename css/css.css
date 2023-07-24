@@ -1,0 +1,390 @@
+*, *::after, *::before  /*блочная модель учитывала рамки и отступы*/
+{ 
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: 'Manrope', sans-serif;
+    margin: 0rem;
+	
+}
+.left-side-mcontainer
+{
+	padding-left:16rem;
+	padding-top: 10rem;
+}
+.header /*Шапка*/
+{
+    height: 4rem;
+    border-bottom: 2px solid #E5E9F2; /*тень*/
+    display: flex;
+}
+
+.logotype /*Логотип*/
+{
+	padding-left: 14rem;
+	padding-right: 50rem;
+}
+
+.nav 
+{
+    font-weight: bold;
+	padding-top: 1.2rem;
+}
+
+.nav-links /*Навигация*/
+{
+    color: #000000;
+    text-decoration: none;
+    margin-right: 40px;
+	font-size: 20px;
+	margin-top: 2rem;
+}
+
+.nav-links:last-child  /*Отступ от последнего элемента*/
+{
+    margin-right: 0px;
+}
+
+a:hover /*При наведении на пункты навигации*/
+{
+	color:#003071;
+}
+
+.main-container /*Главный блок*/
+{
+	display: flex;
+}
+
+.mainphrase /*Фраза главного блока*/
+{
+	color: black;
+	font-size: 38px;
+}
+
+.mainphrase span /*Выделение CWRU фирменным синим цветом*/
+{
+	color:#003071;
+}
+
+.btnstart /*Кнопка Start в главном блоке*/
+{
+	background-color: #003071;
+	color:white;
+	width: 140px;
+	height: 43px;
+	font-family: Manrope;
+	font-size: 22px;
+	font-weight: 600;
+	line-height: normal;
+	border-style: none;
+	border-radius: 3px 3px 3px 3px;
+	cursor: pointer;
+	transition: transform 0.3s; /*Длительность анимации*/
+}
+
+.btnstart:hover /*Кнопка Start в главном блоке, при наведении*/
+{
+	transform: scale(1.1); /* увеличиваем кнопку на 10% при наведении */
+}
+
+.btnstart:active /*Кнопка Start в главном блоке, при нажатии*/
+{
+	background-color:#007AB8 ;
+	color:white;
+}
+
+.imgpc /*Картинка с пк в главном блоке*/
+{
+	margin-top: 4.5rem;
+	margin-left: 19rem;
+}
+
+.zagolovok /*Заголовок блока со сведениями о тесте*/
+{
+	font-size: 38px;
+	text-align: center;
+}
+
+.aboutTest-container /*Блок со сведениями о тесте*/
+{ 
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.elements /*div с элементами блока*/
+{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: flex-start;
+}
+
+.first-element, /*все три элемента*/
+.second-element,
+.third-element 
+{
+	width: 70%;
+	margin-bottom: 20px;
+	display:flex;
+}
+
+.img-content /*svg иконки*/
+{
+	margin-right: 40px;
+	margin-top:50%;
+}
+
+.text-of-elements /*общий div для заголовка каждого пункта и описания*/
+{
+	margin-bottom: 20px;
+}
+
+.title-of-elements /*заголовок каждого пункта*/
+{
+	color:#003071;
+	font-size:32px;
+}
+p
+{
+	font-size:28px;
+}
+
+p span /*CWRU в фирменном синем цвете*/
+{
+	color:#003071;
+	font-weight: bold;
+}
+
+
+
+/*JAVA SCRIPT*/
+
+.quiz 
+{
+	position: relative;
+	margin-top:70px;
+	padding: 2rem 2rem calc(2rem + 70px);
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 0 14px 3px rgba(100, 100, 100, 0.1);
+	width: 800px;
+	max-width: 95vw;
+	overflow: hidden;   
+}
+
+.title
+{
+	font-size: 1.5rem;
+	padding: 1rem 0;
+	text-align: center;
+	margin: 0;
+}
+
+.summary 
+{
+	text-align: center;
+	margin: 0.5rem 0 1rem;
+	font-size: 1.2rem;
+	font-weight: 400;
+}
+
+.result 
+{
+	text-align: center;
+	font-size: 1.2rem;
+	font-weight: 700;
+}
+
+.quiz-list 
+{
+	list-style-type: none;
+	padding: 0;
+}
+
+.quiz-list li 
+{
+	font-size: 1.2rem;
+}
+
+.quiz-list label 
+{
+	cursor: pointer;
+	width: 100%;
+    display: block;
+	padding: 1rem 0.5rem;
+}
+
+.quiz-list label:hover 
+{
+	background-color: rgb(166, 210, 230);
+}
+
+.quiz-list label.correct 
+{
+	color: hsl(143, 60%, 35%);
+	font-weight: bold;
+}
+
+.quiz-list label.disabled 
+{
+	cursor: no-drop;
+}
+
+.quiz-list label.disabled:hover 
+{
+	cursor: no-drop;
+	background-color: transparent;
+}
+
+.quiz-list label.wrong 
+{
+	color: rgb(218, 59, 59);
+	font-weight: bold;
+}
+
+.quiz-list input[type="radio"] 
+{
+	margin-right: 10px;
+}
+
+.quiz-submit 
+{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 70px;
+	line-height: 70px;
+}
+
+.submit 
+{
+	background-color: #003071;
+	color: #fff;
+	border: none;
+	display: block;
+	width: 100%;
+	cursor: pointer;
+	font-size: 1.1rem;
+	font-family: inherit;
+}
+
+.submit:hover 
+{
+	background-color: #007AB8;
+}
+
+.submit.next 
+{
+	background-color: #000000;
+}
+
+.submit.next:hover 
+{
+	background-color: #222222;
+}
+
+.submit.next:focus 
+{
+	outline: none;
+	background-color: #444444;
+}
+
+.quiz-list.shake 
+{
+	animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+	transform: translate3d(0, 0, 0);
+	backface-visibility: hidden;
+	perspective: 1000px;
+	color: #94ca00;
+}
+
+@keyframes shake 
+{
+	10%,
+	90% {
+		transform: translate3d(-1px, 0, 0);
+	}
+	20%,
+	80% {
+		transform: translate3d(2px, 0, 0);
+	}
+	30%,
+	50%,
+	70% {
+		transform: translate3d(-4px, 0, 0);
+	}
+	40%,
+	60% {
+		transform: translate3d(4px, 0, 0);
+	}
+}
+
+.correct 
+{
+	background-color: #d9f6d2;
+	border-left: 4px solid #4caf50;
+}
+  
+  .incorrect 
+{
+	background-color: #fdecea;
+	border-left: 4px solid #f44336;
+}
+
+.quiz-list label.correct::before 
+{	
+	background-color: #4caf50;
+}
+
+.quiz-list label.incorrect::before 
+{	
+	background-color: #f44336;
+}
+
+.quiz-list label.correct 
+{	
+	color: #4caf50;	
+	font-weight: bold;
+}
+
+.quiz-list label.incorrect 
+{	
+	color: #f44336;	
+	font-weight: bold;
+}
+.main
+{
+	display: flex;
+	justify-content: center;
+}
+
+footer
+{
+	height: 150px;
+	background-color:#003071;  
+	flex-grow: 0; /*Запрещаем увеличиваться*/
+	flex-shrink: 0; /*Запрещаем сжиматься*/
+	flex-basis: auto;
+	
+}
+  
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+

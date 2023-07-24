@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CWRU_App</title>
+    <link rel="shortcut icon" type="image" href="media/favicon.jpg"/>
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <img class="logotype" src="media/CWRU_Acronym-logo-brand.jpg" alt="cwrulogo">           
+            <nav class="nav">
+                <a class="nav-links" href="index.html">Home</a>
+                <a class="nav-links" href="test.html">Test</a>
+                <a class="nav-links" target="_blank" href="http://kirillsapaev.tilda.ws">About Me</a>
+            </nav>
+</header>
+    <main class="main">
+        <div class="quiz" id="quiz">
+            <div class="quiz-header" id="qz-header">
+                <h2 class="title">Загружаем вопрос...</h2>
+
+                <h2 class="title>">%title%</h2>
+                <h3 class="summary>">%message%</h3>
+                <p class="result>">%result%</p>
+            </div>
+            <ul class="quiz-list" id="list">
+                <li>
+                    <label>
+                        <input type="radio" class="answer" name="answer">
+                        <span>Ответ...</span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="radio" class="answer" name="answer">
+                        <span>Ответ...</span>
+                    </label>
+                </li>
+            </ul>
+            <button class="quiz-submit submit" id="submit">Ответить</button>
+        </div>
+      
+
+    </main>
+    <script src="js/js.js"></script>
+</body>
+</html>
